@@ -82,7 +82,9 @@ static gboolean start(gpointer user_data)
 
 static GMainLoop *init_glib(void)
 {
+#if !GLIB_CHECK_VERSION(2,35,0)
 	g_type_init();
+#endif
 	return g_main_loop_new(NULL, FALSE);
 
 }

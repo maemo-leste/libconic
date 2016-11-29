@@ -114,7 +114,9 @@ static void connection_cb2(ConIcConnection *connection,
 
 static GMainLoop *init_glib(void)
 {
+#if !GLIB_CHECK_VERSION(2,35,0)
 	g_type_init();
+#endif
 	return g_main_loop_new(NULL, FALSE);
 
 }

@@ -72,13 +72,13 @@ static void statistics_cb(ConIcConnection *connection,
 		con_ic_statistics_event_get_time_active(event));
 	g_debug("signal_strength=%i",
 		con_ic_statistics_event_get_signal_strength(event));
-	g_debug("rx_packets=%llu",
+	g_debug("rx_packets=%" G_GUINT64_FORMAT,
 		con_ic_statistics_event_get_rx_packets(event));
-	g_debug("tx_packets=%llu",
+	g_debug("tx_packets=%" G_GUINT64_FORMAT,
 		con_ic_statistics_event_get_tx_packets(event));
-	g_debug("rx_bytes=%llu",
+	g_debug("rx_bytes=%" G_GUINT64_FORMAT,
 		con_ic_statistics_event_get_rx_bytes(event));
-	g_debug("tx_bytes=%llu",
+	g_debug("tx_bytes=%" G_GUINT64_FORMAT,
 		con_ic_statistics_event_get_tx_bytes(event));
 }
 
@@ -137,7 +137,9 @@ static void connection_cb(ConIcConnection *connection,
 
 static GMainLoop *init_glib(void)
 {
+#if !GLIB_CHECK_VERSION(2,35,0)
 	g_type_init();
+#endif
 	return g_main_loop_new(NULL, FALSE);
 
 }
