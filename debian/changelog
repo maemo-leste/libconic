@@ -1,0 +1,309 @@
+libconic (0.24+fremantle1+0m5) unstable; urgency=low
+
+  * This entry has been added by BIFH queue processor
+    version has been changed to 0.24+fremantle1+0m5
+
+ -- Antti Julku <ext-antti.julku@nokia.com>  Thu, 17 Jun 2010 12:45:20 +0300
+
+libconic (0.24+fremantle1) unstable; urgency=low
+
+  * Fixes: NB#168881 - Don't return any proxy settings if disconnected
+
+ -- Markus Silvan <ext-markus.p.silvan@nokia.com>  Fri, 28 May 2010 16:29:18 +0300
+
+libconic (0.24) unstable; urgency=low
+
+  * Fixes: NB#147286 - Connectivity library causing lots of tasks to spam syslog
+
+ -- Markus Silvan <ext-markus.p.silvan@nokia.com>  Thu, 03 Dec 2009 11:17:15 +0200
+
+libconic (0.23) unstable; urgency=low
+
+  * Fixes: NB#79727 - emit CON_IC_STATUS_DISCONNECTING when
+    disconnecting
+
+ -- Jukka Rissanen <jukka.rissanen@nokia.com>  Wed,  9 Sep 2009 11:53:05 +0300
+
+libconic (0.22) unstable; urgency=low
+
+  * Fixes: NB#122433 - API documentation is in separate doc package.
+
+ -- Jukka Rissanen <jukka.rissanen@nokia.com>  Mon, 15 Jun 2009 11:34:56 +0300
+
+libconic (0.21) unstable; urgency=low
+
+  * Fixes: NB#102394 - Half provisioned IAP was returned to the caller by
+    con_ic_connection_get_all_iaps() which was wrong as user cannot really
+    connect to that kind of IAP.
+
+ -- Jukka Rissanen <jukka.rissanen@nokia.com>  Wed, 20 May 2009 15:30:38 +0300
+
+libconic (0.20) unstable; urgency=low
+
+  * Fixes: NB#107845 - Executable stack used.
+
+ -- Jukka Rissanen <jukka.rissanen@nokia.com>  Wed,  1 Apr 2009 17:23:29 +0300
+
+libconic (0.19) unstable; urgency=low
+
+  * libconic fails with multiple connection objects. See
+    https://bugs.maemo.org/show_bug.cgi?id=3440 for more details.
+    Fixes: NB#87752
+
+ -- Jukka Rissanen <jukka.rissanen@nokia.com>  Tue, 14 Oct 2008 13:58:39 +0300
+
+libconic (0.18) unstable; urgency=low
+
+  * Debian dependencies fixed. Fixes: NB#87218
+
+ -- Jukka Rissanen <jukka.rissanen@nokia.com>  Wed, 30 Jul 2008 11:35:52 +0300
+
+libconic (0.17) unstable; urgency=low
+
+  * Fixed a typo in conicconnectionevent.h. Fixes: NB#87001
+
+ -- Jukka Rissanen <jukka.rissanen@nokia.com>  Tue, 29 Jul 2008 10:09:52 +0300
+
+libconic (0.16-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Conicconnection class destructor checks for NULL dbus connection before
+    trying to unref. Fixes: NB#86632
+
+ -- Teemu Virolainen <teemu.virolainen@nokia.com>  Wed, 25 Jun 2008 16:48:32 +0200
+
+libconic (0.16) unstable; urgency=low
+
+  * Automatic events are not stopped by Internet Connectivity system when
+    con_ic_connection_connect() is called. The documentation was wrong and
+    has now been updated. Fixes: NB#82172.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Wed, 26 Mar 2008 14:37:35 +0200
+
+libconic (0.15-0.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Revert double CONNECTED callback change for broken applications that
+    use automatic events.
+
+ -- Jukka Partanen <jukka.t.partanen@nokia.com>  Mon,  3 Mar 2008 14:15:40 +0200
+
+libconic (0.15-0.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Added CON_IC_STATUS_NETWORK_UP for WiMAX provisioning.
+  * Fixed double CONNECTED callback if automatic events are on.
+
+ -- Jukka Partanen <jukka.t.partanen@nokia.com>  Tue, 19 Feb 2008 15:30:40 +0200
+
+libconic (0.15) unstable; urgency=low
+
+  * Don't list IAPs that have "temporary" attribute set to true.
+    Fixes: NB#79202.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Fri, 18 Jan 2008 12:08:00 +0200
+
+libconic (0.14) unstable; urgency=low
+
+  * Ack all NMUs
+  * Remove obsolete '-std=*c99' compiler flags. Fixes: NB#78351
+  * Fixed debian/control build deps to use icd2-osso-ic-dev if available;
+    libconic has a versioned dependency to osso-ic-dev for a good reason
+  * Check that the iap object to unref is non-NULL. Fixes: NB#78855
+  * Use IAP "name" attribute if stored in GConf
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Thu, 10 Jan 2007 15:28:00 +0200
+
+libconic (0.13-0.10) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Clear proxy cache when connections change. Fixes: NB#71211
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Mon, 12 Nov 2007 14:41:11 +0200
+
+libconic (0.13-0.9) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Added some NULL checks before getting proxy settings. Fixes: NB#71807
+  * Check that pending calls are non-NULL. Fixes: NB#72018
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Fri, 19 Oct 2007 10:05:34 +0300
+
+libconic (0.13-0.8) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Check values in disconnect_by_id(). Fixes: NB#70889
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Tue, 25 Sep 2007 14:01:12 +0300
+
+libconic (0.13-0.7) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Fixed API document for ConIcConnection. Fixes: NB#66623, MB#1269
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Tue,  4 Sep 2007 07:59:47 +0300
+
+libconic (0.13-0.6) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Let ICd DBUS signal through. Fixes: NB#65479
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Fri, 31 Aug 2007 15:45:20 +0300
+
+libconic (0.13-0.5) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Documented ConIcConnectionStatus values. Fixes: NB#56153
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Fri, 15 Jun 2007 10:03:10 +0300
+
+libconic (0.13-0.4) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Fixed to compile with newer osso-ic-dev.
+  * Unref ConIcEvent after sending the event. Fixes: NB#56627
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Fri,  1 Jun 2007 08:47:07 +0300
+
+libconic (0.13-0.3) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Use correct parent class for StatisticsEvent. Fixes: NB#51338
+  * Survive object destruction at callback. Fixes: NB#53294
+  * Uninitialize DBUS when last instance is deleted. Fixes: NB#53299
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Tue,  8 May 2007 11:24:00 +0300
+
+libconic (0.13-0.2) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Fixed to compile with -pedantic. Fixes: NB#54760
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Mon, 23 Apr 2007 08:24:30 +0300
+
+libconic (0.13-0.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Fixed to work with new DBUS
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Fri, 16 Mar 2007 10:15:52 +0200
+
+libconic (0.13) unstable; urgency=low
+
+  * Fixed freeing of a GError. Fixes: NB#49308.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Wed, 13 Nov 2006 11:39:00 +0200
+
+libconic (0.12) unstable; urgency=low
+
+  * re-fixed fetching of proxies. Fixes: NB#47563.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Tue, 28 Nov 2006 09:25:00 +0200
+
+libconic (0.11) unstable; urgency=low
+
+  * con_ic_iap_new() checks that IAP exists. Fixes: NB#47570.
+  * other minor gconf fixes.
+  * empty statistics event is generated on dbus error. Fixes: NB#47567.
+  * IAP id and bearer type is set for statistics events. Fixes: NB#47566.
+  * minor API documentation clarification.
+  * get proxies from iap specific gconf settings. Fixes: NB#47563.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Fri, 17 Nov 2006 13:31:00 +0200
+
+libconic (0.10) unstable; urgency=low
+
+  * "automatic-connection-events" reports all events. The tracked connection
+    is not changed with "automatic-connection-events". Fixes: NB#45623.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Tue, 31 Oct 2006 11:29:00 +0200
+
+libconic (0.9) unstable; urgency=low
+
+  * Debug package creation added. Fixes: NB#40773.
+  * 'make dist' works
+  * removed support for .la static libraries in -dev package
+  * sanitized the debian/copyright file
+  * Timeouts consistent with osso-ic-oss package. Fixes: NB#38841.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Tue,  3 Oct 2006 16:13:00 +0300
+
+libconic (0.8-0.1) unstable; urgency=low
+
+  * Non-maintainer upload
+  * Fixed license issues. Fixes: NB#39112
+
+ -- Aapo Makela <aapo.makela@nokia.com>  Wed, 13 Sep 2006 10:45:03 +0300
+
+libconic (0.8) unstable; urgency=low
+
+  * Licence set to LGPL 2.1. Fixes: NB#39112.
+  * Not returning tmp connections in _get_all_iaps. Fixes: NB#37340.
+
+ -- Patrik Flykt <patrik.flykt@nokia.com>  Thu, 31 Aug 2006 13:00:00 +0300
+
+libconic (0.7) unstable; urgency=low
+
+  * Changed con_ic_connection_get_<proto>_[host|port] to private.
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Thu,  8 Jun 2006 17:14:34 +0300
+
+libconic (0.6) unstable; urgency=low
+
+  * Multiple ConIcConnection objects in the same process are now supported.
+  * Set USER_DATA_MAGIC.
+  * Use con_ic prefix event with static functions.
+  * Fixed parsing of version from debian/changelog.
+  * Really cleaned test-iap.c.
+  * Parse the packager version from debian/changelog.
+  * Cleaned up test-iap.c
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Thu, 11 May 2006 19:32:03 +0300
+
+libconic (0.5) unstable; urgency=low
+
+  * Run dh_makeshlibs. 
+  * Cleaned up tests.
+  * Set iap_id and bearer to ConIcEvent in all cases.
+  * Send a connection-event immediately when automatic-connection-events
+    property is enabled. (closes: #28591)
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Fri,  5 May 2006 13:00:22 +0300
+
+libconic (0.4) unstable; urgency=low
+
+  * Added con_ic_connection_get_proxy_host() and
+    con_ic_connection_get_proxy_port().
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Wed, 26 Apr 2006 16:31:09 +0300
+
+libconic (0.3.2) unstable; urgency=low
+
+  * Removed -Wcast-align (closes: #24967).
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Thu, 30 Mar 2006 18:31:16 +0300
+
+libconic (0.3.1) unstable; urgency=low
+
+  * Add osso-ic-dev to Build-Depends.
+
+ -- Timo Teras <timo.teras@nokia.com>  Wed, 22 Mar 2006 23:10:21 +0200
+
+libconic (0.3) unstable; urgency=low
+
+  * Fixed Build-Depends.
+  * Wrote doxygen documentation.
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Tue, 21 Mar 2006 14:07:07 +0200
+
+libconic (0.2) unstable; urgency=low
+
+  * First public release.
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Mon, 20 Mar 2006 17:04:45 +0200
+
+libconic (0.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Kalle Valo <Kalle.Valo@nokia.com>  Wed, 15 Mar 2006 10:01:27 +0200

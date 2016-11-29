@@ -1,0 +1,49 @@
+Source: libconic
+Priority: optional
+Maintainer: Patrik Flykt <patrik.flykt@nokia.com>
+Build-Depends: debhelper (>= 4.0.0), autotools-dev, libglib2.0-dev (>= 2.8),
+ libdbus-1-dev (>= 0.60), libgconf2-dev (>> 2.6.4),
+ osso-ic-dev (>= 1.0.1)|icd2-osso-ic-dev
+Standards-Version: 3.6.2
+Section: libs
+
+Package: libconic0-dev
+Section: libdevel
+Architecture: any
+Depends: libconic0 (= ${Source-Version}), libdbus-1-dev (>= 0.60),
+ libglib2.0-dev (>= 2.8)
+Description: Internet Connectivity library development files
+ Internet Connectivity library (libconic) is for requesting Internet
+ connections. It also provides statistics and settings for the current
+ connection.
+ .
+ This package contains the header files.
+
+Package: libconic0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Internet Connectivity library
+ Internet Connectivity library (libconic) is for requesting Internet
+ connections. It also provides statistics and settings for the current
+ connection.
+ .
+ This package contains the shared libraries.
+
+Package: libconic0-dbg
+Section: libs
+Architecture: any
+Depends: libconic0 (= ${Source-Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Debug symbols for the Internet Connectivity library
+ Internet Connectivity library (libconic) debug symbols.
+
+Package: libconic0-doc
+Section: libdevel
+Architecture: any
+Description: Internet Connectivity library documentation
+ Internet Connectivity library (libconic) is for requesting Internet
+ connections. It also provides statistics and settings for the current
+ connection.
+ .
+ This package contains the documentation files.
+

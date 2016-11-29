@@ -1,0 +1,11 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: libconic
+Description: Internet Connectivity library
+Version: @VERSION@
+Requires: dbus-1 >= 0.60 glib-2.0 gobject-2.0
+Libs: -lconic
+Cflags: -I${includedir}/conic
