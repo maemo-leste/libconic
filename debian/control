@@ -2,7 +2,8 @@ Source: libconic
 Priority: optional
 Maintainer: Patrik Flykt <patrik.flykt@nokia.com>
 Build-Depends: debhelper (>= 4.0.0), autotools-dev, libglib2.0-dev (>= 2.8),
- libdbus-1-dev (>= 0.60), libgconf2-dev (>> 2.6.4),
+ libdbus-1-dev (>= 0.60), libgconf2-dev (>> 2.6.4), autoconf, automake,
+ libtool, doxygen,
  osso-ic-dev (>= 1.0.1)|icd2-osso-ic-dev
 Standards-Version: 3.6.2
 Section: libs
