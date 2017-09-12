@@ -10,7 +10,7 @@ Section: libs
 Package: libconic0-dev
 Section: libdevel
 Architecture: any
-Depends: libconic0 (= ${Source-Version}), libdbus-1-dev (>= 0.60),
+Depends: libconic0 (= ${source:Version}), libdbus-1-dev (>= 0.60),
  libglib2.0-dev (>= 2.8)
 Description: Internet Connectivity library development files
  Internet Connectivity library (libconic) is for requesting Internet
@@ -33,7 +33,7 @@ Description: Internet Connectivity library
 Package: libconic0-dbg
 Section: libs
 Architecture: any
-Depends: libconic0 (= ${Source-Version}), ${shlibs:Depends}, ${misc:Depends}
+Depends: libconic0 (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
 Description: Debug symbols for the Internet Connectivity library
  Internet Connectivity library (libconic) debug symbols.
 
