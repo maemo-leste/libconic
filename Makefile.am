@@ -14,10 +14,6 @@ EXTRA_DIST = \
 	debian/compat \
 	debian/control \
 	debian/copyright \
-	debian/libconic0-dev.dirs \
-	debian/libconic0-dev.files \
-	debian/libconic0.dirs \
-	debian/libconic0.files \
 	debian/rules
 
 if DOXYGEN_DOCS_ENABLED

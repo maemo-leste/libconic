@@ -1,16 +1,17 @@
 Source: libconic
 Priority: optional
-Maintainer: Patrik Flykt <patrik.flykt@nokia.com>
-Build-Depends: debhelper (>= 4.0.0), autotools-dev, libglib2.0-dev (>= 2.8),
+Maintainer: Merlijn Wajer <merlijn@wizzup.org>
+Build-Depends: debhelper (>= 10), autotools-dev, libglib2.0-dev (>= 2.8),
  libdbus-1-dev (>= 0.60), libgconf2-dev (>> 2.6.4), autoconf, automake,
  libtool, doxygen,
  osso-ic-dev (>= 1.0.1)|icd2-osso-ic-dev
-Standards-Version: 3.6.2
+Standards-Version: 4.3.0
 Section: libs
 
 Package: libconic0-dev
 Section: libdevel
 Architecture: any
+Multi-arch: same
 Depends: libconic0 (= ${source:Version}), libdbus-1-dev (>= 0.60),
  libglib2.0-dev (>= 2.8)
 Description: Internet Connectivity library development files
@@ -23,6 +24,7 @@ Description: Internet Connectivity library development files
 Package: libconic0
 Section: libs
 Architecture: any
+Multi-arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Internet Connectivity library
  Internet Connectivity library (libconic) is for requesting Internet
@@ -31,16 +33,10 @@ Description: Internet Connectivity library
  .
  This package contains the shared libraries.
 
-Package: libconic0-dbg
-Section: libs
-Architecture: any
-Depends: libconic0 (= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
-Description: Debug symbols for the Internet Connectivity library
- Internet Connectivity library (libconic) debug symbols.
-
 Package: libconic0-doc
-Section: libdevel
-Architecture: any
+Section: doc
+Architecture: all
+Multi-arch: foreign
 Description: Internet Connectivity library documentation
  Internet Connectivity library (libconic) is for requesting Internet
  connections. It also provides statistics and settings for the current
