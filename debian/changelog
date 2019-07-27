@@ -1,3 +1,9 @@
+libconic (0.24.1) unstable; urgency=medium
+
+  * Port to dh 10
+
+ -- Merlijn Wajer <merlijn@wizzup.org>  Sat, 27 Jul 2019 12:16:51 +0200
+
 libconic (0.24) unstable; urgency=medium
 
   * update control file to latest standards
