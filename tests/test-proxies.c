@@ -75,7 +75,7 @@ static void test_proxies()
 	g_debug("ignore_hosts:");
 	list = con_ic_connection_get_proxy_ignore_hosts(connection);
 	for (entry = list; entry; entry = entry->next) {
-		g_debug("%s", entry->data);
+		g_debug("%s", (gchar*)entry->data);
 		g_free(entry->data);
 	}
 	g_slist_free(list);
@@ -116,7 +116,7 @@ static void test_proxies_old()
 	g_debug("ignore_hosts:");
 	list = con_ic_connection_get_proxy_ignore_hosts(connection);
 	for (entry = list; entry; entry = entry->next) {
-		g_debug("%s", entry->data);
+		g_debug("%s", (gchar*)entry->data);
 		g_free(entry->data);
 	}
 	g_slist_free(list);
